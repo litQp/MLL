@@ -44,7 +44,6 @@ def create_dataset_and_labels(audio_files):
     X = np.array(X)[:, np.newaxis, :, :] 
     return X, np.array(y)
 
-
 directory = r"/content/drive/MyDrive/speech"
 fake_dir = r"/content/drive/MyDrive/speech/fake"
 real_dir = r"/content/drive/MyDrive/speech/real"
@@ -106,4 +105,4 @@ for epoch in range(20):
             total += targets.size(0)
             correct += (predicted == targets).sum().item()
     accuracy = 100 * correct / total
-    print(f'Epoch {epoch+1}, Loss: {loss.item()}, Validation Accuracy: {accuracy:.2f}%')
+    print(f'Epoch {epoch+1}, Loss: {loss.item()}, Точность: {accuracy:.2f}%')
